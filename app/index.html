@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>marginalism</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="container">
+            <div class="header">
+                <h3 class="text-muted">Marginalism</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="marginalism-calculator">
+                </div>
+            </div>
+
+        </div>
+        
+        <script type="text/template" id="round-table-template">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Number of Workers</th>
+                    <th>Number of Gloves Produced</th>
+                    <th>Marginal Product</th>
+                    <th>Value of Additional Gloves Produced</th>
+                    <th>Marginal Cost of Labor</th>
+                </tr>
+            </thead>
+            <tbody class="rounds">
+            </tbody>
+        </table>
+        
+        <button class="btn btn-default add-round">Add Round</button>
+        </script>
+        
+        <script type="text/template" id="round-table-row-template">
+            <td><%= numberOfWorkers %></td>
+            <td>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default increment-gloves-produced" type="button"><i class="glyphicon glyphicon-plus"></i></button>
+                    </span>
+                    <input type="number" class="form-control gloves-produced" value=<%= numberOfGlovesProduced %>>
+                    <span class="input-group-btn">
+                        <button class="btn btn-default decrement-gloves-produced" type="button"><i class="glyphicon glyphicon-minus"></i></button>
+                    </span>
+                </div>
+            </td>
+            <td><%= marginalProduct %></td>
+            <td><%= valueOfAdditionalGlovesProduced %></td>
+            <td><%= marginalCostOfLabor %></td>
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/numeral/numeral.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/templates.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
